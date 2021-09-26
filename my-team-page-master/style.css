@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --font-pt-serif: 'PT Serif', serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --gray-1: #333;
+    --gray-2: #4f4f4f;
+    --gray-3: #bdbdbd;
+}
+
+/* general styles */
+
+h1,
+p,
+a {
+    font-family: var(--font-space-mono);
+    font-size: 1rem;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.picture div:last-child p{
+    font-family: var(--font-pt-serif);
+    font-family: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* body flex */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* header styles */
+
+header{
+    margin: 2rem;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+} 
+
+header h1{
+    font-family: var(--font-pt-serif);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+header #header-info{
+    max-width: 400px;
+    font-family: var(--font-poppins);
+}
+
+header #header-info h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+header #header-info p{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray-2);
+}
+
+/* pictures */
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6 {
+    position: relative;
+    display: flex;
+}
+
+.pic1 div:last-child p,
+.pic2 div:last-child p,
+.pic3 div:last-child p,
+.pic4 div:last-child p,
+.pic5 div:last-child p,
+.pic6 div:last-child p {
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: 9px 67%;
+}
+
+/* main content */
+
+main{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+    justify-content: flex-start;
+    gap: 3rem 5rem;
+}
+
+.picture:nth-child(3n+2){
+    margin-top: 4rem;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-montserrat);
+    color: var(--gray-3);
+}
+
+footer span{
+    color: var(--gray-2);
+}
+
+footer a{
+    transition: all 200ms;
+}
+
+footer a:hover{
+    color: var(--gray-2);
+}
+
+/* media queries */
+
+@media (max-width: 844px) {
+    header{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media (max-width:909px) {
+    main{
+        margin: 2rem;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .picture {
+        max-width: max-content;
+        height: auto;
+    }
+
+    .picture:nth-child(3n+2){
+        margin-top: 0;
+    }
+
+    .picture:nth-child(even){
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width:643px) {
+    
+}
+
+@media (max-width:535px) {
+    main{
+        gap: 1rem 3rem;
+    }
+    .picture div:first-child figcaption{
+        font-size: 14px;
+    }
+
+    .picture div:last-child p{
+        font-size: 10px;
+    }
+}
