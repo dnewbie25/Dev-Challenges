@@ -1,0 +1,22 @@
+@import "config", "header";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text-color;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $primary-background;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
